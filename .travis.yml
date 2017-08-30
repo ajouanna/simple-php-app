@@ -3,10 +3,7 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - docker build -t ajouanna/simpleapp .
-  - docker-compose up -d 
-  - docker ps -a
-  
 script:
-  - ls
+  - docker build -t ajouanna/simpleapp .
+
+
