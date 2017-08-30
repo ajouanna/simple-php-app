@@ -5,6 +5,8 @@ services:
 
 before_install:
   - docker build -t ajouanna/simpleapp .
-
-script:
   - docker-compose up -d 
+  - docker ps -a
+  
+script:
+  - ls
