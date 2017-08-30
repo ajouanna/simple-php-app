@@ -4,6 +4,9 @@ services:
   - docker
 
 script:
-  - docker build -t ajouanna/simpleapp .
+  - docker build -t ajouanna/test .
 
 
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push ajouanna/test
